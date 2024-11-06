@@ -8,19 +8,21 @@ public class Lab005_Triangle_Classifier {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter triangle side1");
-        int side1 = scan.nextInt();
+        double side1 = scan.nextDouble();
 
         System.out.println("Enter triangle side2");
-        int side2 = scan.nextInt();
+        double side2 = scan.nextDouble();
 
         System.out.println("Enter triangle side3");
-        int side3 = scan.nextInt();
+        double side3 = scan.nextDouble();
 
-        if(side1==side2 && side2==side3){
+        if(side1==side2 && side2==side3 && side1==side3){
             System.out.println("The given triangle is Equilatteral Triangle");
-        } else if (side1 == side2 || side2 == side3) {
+        } else if (side1 == side2 || side2 == side3 || side1==side3) {
             System.out.println("The given triangle is Isosceles Triangle");
-        } else
+        } else if(side1<=0 || side2<=0 || side3<=0){
+            System.out.println("Invalid Input: Side length must be positive");
+        }else
             System.out.println("The triangle is Scalene");
 
         scan.close();

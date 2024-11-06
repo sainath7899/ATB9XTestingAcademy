@@ -18,8 +18,10 @@ public class Lab004_GradeCalculation {
             System.out.println("Your grade is " +'C');
         } else if (score>60 && score<70) {
             System.out.println("Your grade is " +'D');
-        } else
-            System.out.println("Your grade is" +'F');
+        } else if(score<=0 || score>=100) {  //Edge case
+            System.out.println("Lol! Are you God!");
+        }else
+            System.out.println("Your grade is " +'F');
 
             scan.close();
 
